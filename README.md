@@ -1,6 +1,19 @@
-# SF6 Phase B — iPhone Safari video frame probe ONLY
+# SF6 AI Coach — isolated GitHub Pages staging
 
-Status: **isolated pre-production experiment**. No Google OAuth, no YouTube embeds, no private videos or user credentials. Source: SashunDev/sf6-ai-coach-viewer Draft PR #17.
+Status: **pre-production verification only. Not the sf6-ai-coach-viewer production site.** This repository includes two separate test experiences:
+
+- **B1 Safari frame probe:** [`public/index.html`](public/index.html) / https://sashundev.github.io/sf6-b1-safari-probe/ . This original test remains synthetic/MP4-only with no Google OAuth and no YouTube embed; source originally derived from Draft PR #17.
+- **B3 / PR #23 mode-first workbench:** [`public/b3-product.html`](public/b3-product.html) / https://sashundev.github.io/sf6-b1-safari-probe/b3-product.html . This staging screen is mirrored from `SashunDev/sf6-ai-coach-viewer` Draft PR #23 (source `cc8ff52ba4f446993ff130979cd974bede1e8cec`), with a visible fixed **non-production** label. It includes the local-video and YouTube mode selector, Google GIS OAuth only after owner interaction, opt-in client-side owner-video metadata cache, owner YouTube library, playback, and one-video sharing. [`youtube-share.html`](public/youtube-share.html) is the independent guest view.
+
+The B3 preview is a **public web page**. No Google access token, OAuth secret, personal video binary, or actual private owner upload data is committed to this repository. Google access is initiated only by explicit owner action and uses the site's already-approved browser origin. The optional saved list lives in that browser's localStorage for up to 30 days and is not synchronized between staging and production origins. A friend link to an unlisted YouTube video can be viewed/re-shared by anyone possessing it; test only with videos whose sharing is intended.
+
+The GitHub Pages deployment workflow publishes this repository's `public/` directory on pushes to `main`; **do not merge/deploy staging changes to the production repo**. The PR #23 visual UI was already validated on hosted synthetic Chromium 5 viewports, but real iPhone Safari and owner Google/YouTube acceptance remain pending.
+
+---
+
+## Original B1-only probe instructions
+
+The original instructions below apply **only** to `public/index.html`, not to the B3 YouTube workbench.
 
 ## Publish in a new, dedicated public GitHub repository
 - This package must not be merged into or deployed as the original sf6-ai-coach-viewer production site.
